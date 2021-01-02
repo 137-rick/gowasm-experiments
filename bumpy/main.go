@@ -60,7 +60,7 @@ func main() {
 		}()
 
 		e := args[0]
-		if e.Get("target") != canvasEl {
+		if !e.Get("target").InstanceOf(canvasEl)  {
 			return nil
 		}
 		mx := e.Get("clientX").Float() * worldScale
